@@ -113,7 +113,7 @@
     <Compile Include="Modilty\Error.cs" />
     <Compile Include="Modilty\Chip.cs" />
     <Compile Include="Modilty\DataPage.cs" />
-    <Compile Include="Program\PassportAuth.cs" />
+    <Compile Include="Program\MrzPassport.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>

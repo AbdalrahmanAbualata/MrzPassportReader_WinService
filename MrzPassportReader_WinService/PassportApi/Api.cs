@@ -49,7 +49,7 @@ namespace IdCard_service_Api
 
 
                 DocumentReaderDevice pr = new DocumentReaderDevice();
-                PassportAuth prog = new PassportAuth();
+                MrzPassport prog = new MrzPassport();
 
 
                 DocScanner Scanner = pr.Scanner;
@@ -254,17 +254,17 @@ namespace IdCard_service_Api
                 return Request.CreateResponse(HttpStatusCode.InternalServerError,error , Configuration.Formatters.JsonFormatter);
             }
 
-                //if (response == "2")
-                //{
-                //    // 102 =No Passport Or chip issue
-                //    //prog.Dispose();
-                //    //pr.Dispose();
-                //    //pr.Close();
-                //    Error error = new Error();
-                //    error.Code = 102;
-                //    error.Message = "No Passport Or chip issue";
-                //    return Request.CreateResponse(HttpStatusCode.InternalServerError, error, Configuration.Formatters.JsonFormatter);
-                //}
+                if (response == "2")
+                {
+                //// 102 =No Passport Or chip issue
+                //prog.Dispose();
+                //pr.Dispose();
+                //pr.Close();
+                Error error = new Error();
+                    error.Code = 102;
+                    error.Message = "No Passport or wrong position";
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, error, Configuration.Formatters.JsonFormatter);
+                }
 
                 return Request.CreateResponse(HttpStatusCode.OK, passport, Configuration.Formatters.JsonFormatter);          
         }

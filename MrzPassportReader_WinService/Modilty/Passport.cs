@@ -32,6 +32,31 @@ namespace IdCardReader_WinService.Modilty
 
 
         /// <summary>
+        /// Gets or Sets FirstName
+        /// </summary>
+        [DataMember(Name = "firstName", EmitDefaultValue = false)]
+        public string FirstName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SecondName
+        /// </summary>
+        [DataMember(Name = "secondName", EmitDefaultValue = false)]
+        public string SecondName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SecondName
+        /// </summary>
+        [DataMember(Name = "thirdName", EmitDefaultValue = false)]
+        public string ThirdName { get; set; }
+
+
+        /// <summary>
+        /// Gets or Sets surname
+        /// </summary>
+        [DataMember(Name = "surname", EmitDefaultValue = false)]
+        public string Surname { get; set; }
+
+        /// <summary>
         /// Gets or Sets dataPage
         /// </summary>
         [DataMember(Name = "dataPage", EmitDefaultValue = false)]
